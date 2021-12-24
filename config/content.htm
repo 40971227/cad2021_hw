@@ -117,7 +117,8 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div><h3>零件</h3>
+</div>
+<h3>零件</h3>
 <script>
 var winkVideoData = {
   dataVersion: 1,
@@ -139,7 +140,8 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div><h2>solvespace</h2>
+</div>
+<h2>solvespace</h2>
 <p><span>2013 年在Libre Graphics World上</span><span><span>發表了對開發人員的簡短評論和採訪</span><span>。這篇評論稱讚 SolveSpace 的可執行文件小、先進的約束求解器和輸出格式範圍。</span><span>同一篇評論指出了一些缺點，主要是它對 NURBS 布爾值的緩慢和有限的處理以及缺乏原生 Linux 支持。</span></span><span><span>但是，此後添加了本地 Linux 支持。</span></span></p>
 <p><span><span></span></span></p>
 <p><span><span>以前同樣由 Westhues 開發的名為 SketchFlat 的軟件包已被 SolveSpace 取代。</span></span></p>
@@ -294,9 +296,8 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressLeftClass"></div>
 <div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
 <div class="winkVideoControlBarProgressRightClass"></div>
-<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
-<div class="winkVideoControlBarProgressThumbClass"></div>
-</div>
-<div class="winkVideoPlayOverlayClass"></div>
-</div>
-</div>
+<h1>meArm進度</h1>
+<p>插入轉軸</p>
+<div class="winkVideoPlayOverlayClass"><img alt="" height="346" src="/images/插入轉軸.png" width="578"/></div>
+<div class="winkVideoPlayOverlayClass">模擬程式</div>
+<div class="winkVideoPlayOverlayClass">function closeEventHandler(h)<br/> sim.addLog(sim.verbosity_scriptinfos,'Window '..h..' is closing...')<br/> simUI.hide(h)<br/>end<br/> <br/>function joint1_rotate(ui,id,newVal)<br/> simUI.setLabelText(ui,3000,'theta1 set to '..newVal)<br/> sim.setJointTargetPosition(joint1, newVal*deg)<br/>end<br/> <br/>function joint2_rotate(ui,id,newVal)<br/> simUI.setLabelText(ui,3000,'theta2 set to '..newVal)<br/> sim.setJointTargetPosition(joint2, newVal*deg)<br/>end<br/> <br/>function joint3_rotate(ui,id,newVal)<br/> simUI.setLabelText(ui,3000,'theta3 set to '..newVal)<br/> sim.setJointTargetPosition(joint3, newVal*deg)<br/>end<br/> <br/>function joint16_rotate(ui,id,newVal)<br/> simUI.setLabelText(ui,3000,'theta16 set to '..newVal)<br/> sim.setJointTargetPosition(joint4, newVal*deg)<br/>end<br/> <br/>function sysCall_init()<br/> -- do some initialization here<br/> joint1 = sim.getObjectHandle('motor1')<br/> joint2 = sim.getObjectHandle('motor2')<br/> joint3 = sim.getObjectHandle('motor6')<br/> joint4 = sim.getObjectHandle('motor15')<br/> <br/> deg = math.pi/180<br/> print(i)<br/> xml = [[<br/> &lt;ui closeable="true" on-close="closeEventHandler" resizable="true"&gt;<br/> &lt;label text="This is a demo of the CustomUI plugin. Browse through the tabs below to explore all the widgets that can be created with the plugin." wordwrap="true" /&gt;<br/> &lt;tabs&gt;<br/> &lt;tab title="Numeric"&gt;a<br/> &lt;label text="Sliders can be oriented horizontally or vertically, and have optional properties that can be set (in the XML) such as minimum and maximum value." wordwrap="true" /&gt;<br/> &lt;label text="" id="3000" wordwrap="true" /&gt;<br/> &lt;label text="theta1" /&gt; &lt;hslider tick-position="above" tick-interval="1"<br/> minimum="0" maximum="360" on-change="joint1_rotate" /&gt;<br/> &lt;label text="theta2" /&gt; &lt;hslider tick-position="above" tick-interval="1"<br/> minimum="-90" maximum="65" on-change="joint2_rotate" /&gt;<br/> &lt;label text="theta3" /&gt; &lt;hslider tick-position="above" tick-interval="1"<br/> minimum="-90" maximum="185" on-change="joint3_rotate" /&gt;<br/> &lt;label text="theta16" /&gt; &lt;hslider tick-position="above" tick-interval="1"<br/> minimum="0" maximum="15" on-change="joint16_rotate" /&gt;<br/> &lt;/tab&gt;<br/> &lt;/tabs&gt;<br/> &lt;/ui&gt;<br/> ]]<br/> ui=simUI.create(xml)<br/> <br/>end</div></div></div></div>
