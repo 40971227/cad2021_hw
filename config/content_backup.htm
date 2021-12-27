@@ -95,7 +95,7 @@ end</pre>
 <h4>solvespace運動場景</h4>
 <h4><br/><span>onshape</span><span>運動場景</span></h4>
 <h2>W13</h2>
-<h3>匯入CoppeliaSim</h3>
+<h3>meArm模擬</h3><h3>匯入CoppeliaSim</h3>
 <script>
 var winkVideoData = {
   dataVersion: 1,
@@ -296,10 +296,8 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressLeftClass"></div>
 <div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
 <div class="winkVideoControlBarProgressRightClass"></div>
-<h1 class="winkVideoControlBarProgressRightClass">meArm進度</h1>
-<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
-<div class="winkVideoControlBarProgressThumbClass"></div>
-</div>
-<div class="winkVideoPlayOverlayClass"></div>
-</div>
-</div>
+<h1>meArm進度</h1>
+<p>插入轉軸</p>
+<div class="winkVideoPlayOverlayClass"><img alt="" height="346" src="/images/插入轉軸.png" width="578"/></div>
+<div class="winkVideoPlayOverlayClass">模擬程式</div>
+<div class="winkVideoPlayOverlayClass">function closeEventHandler(h)<br/> sim.addLog(sim.verbosity_scriptinfos,'Window '..h..' is closing...')<br/> simUI.hide(h)<br/>end<br/> <br/>function joint1_rotate(ui,id,newVal)<br/> simUI.setLabelText(ui,3000,'theta1 set to '..newVal)<br/> sim.setJointTargetPosition(joint1, newVal*deg)<br/>end<br/> <br/>function joint2_rotate(ui,id,newVal)<br/> simUI.setLabelText(ui,3000,'theta2 set to '..newVal)<br/> sim.setJointTargetPosition(joint2, newVal*deg)<br/>end<br/> <br/>function joint3_rotate(ui,id,newVal)<br/> simUI.setLabelText(ui,3000,'theta3 set to '..newVal)<br/> sim.setJointTargetPosition(joint3, newVal*deg)<br/>end<br/> <br/>function joint16_rotate(ui,id,newVal)<br/> simUI.setLabelText(ui,3000,'theta16 set to '..newVal)<br/> sim.setJointTargetPosition(joint4, newVal*deg)<br/>end<br/> <br/>function sysCall_init()<br/> -- do some initialization here<br/> joint1 = sim.getObjectHandle('motor1')<br/> joint2 = sim.getObjectHandle('motor2')<br/> joint3 = sim.getObjectHandle('motor6')<br/> joint4 = sim.getObjectHandle('motor15')<br/> <br/> deg = math.pi/180<br/> print(i)<br/> xml = [[<br/> &lt;ui closeable="true" on-close="closeEventHandler" resizable="true"&gt;<br/> &lt;label text="This is a demo of the CustomUI plugin. Browse through the tabs below to explore all the widgets that can be created with the plugin." wordwrap="true" /&gt;<br/> &lt;tabs&gt;<br/> &lt;tab title="Numeric"&gt;a<br/> &lt;label text="Sliders can be oriented horizontally or vertically, and have optional properties that can be set (in the XML) such as minimum and maximum value." wordwrap="true" /&gt;<br/> &lt;label text="" id="3000" wordwrap="true" /&gt;<br/> &lt;label text="theta1" /&gt; &lt;hslider tick-position="above" tick-interval="1"<br/> minimum="0" maximum="360" on-change="joint1_rotate" /&gt;<br/> &lt;label text="theta2" /&gt; &lt;hslider tick-position="above" tick-interval="1"<br/> minimum="-90" maximum="65" on-change="joint2_rotate" /&gt;<br/> &lt;label text="theta3" /&gt; &lt;hslider tick-position="above" tick-interval="1"<br/> minimum="-90" maximum="185" on-change="joint3_rotate" /&gt;<br/> &lt;label text="theta16" /&gt; &lt;hslider tick-position="above" tick-interval="1"<br/> minimum="0" maximum="15" on-change="joint16_rotate" /&gt;<br/> &lt;/tab&gt;<br/> &lt;/tabs&gt;<br/> &lt;/ui&gt;<br/> ]]<br/> ui=simUI.create(xml)<br/> <br/>end</div></div></div></div>
